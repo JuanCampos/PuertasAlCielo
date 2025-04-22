@@ -92,8 +92,8 @@ import limpiezaImg from "../assets/limpieza.png";
             </div>
 
             <div class="image__about">
-                    <Image src={fondo1Img} alt="" width={385}/>
-                    <Image src={fondo2Img} alt="" width={400}/>
+                    <Image src={fondo1Img} alt="" width={385} class="img1"/>
+                    <Image src={fondo2Img} alt="" width={400} class="img2"/>
             </div>
         </div>
     </div>
@@ -348,6 +348,12 @@ import limpiezaImg from "../assets/limpieza.png";
         padding: 100px 0px;
         background: var(--main_color-tercery);
         margin-top: 100px;
+    }
+    .img1{
+        border-radius: 36px 0 0 36px;
+    }
+    .img2{
+        border-radius: 0 36px 36px 0;
     }
 
     .about {
