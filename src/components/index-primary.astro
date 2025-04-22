@@ -34,8 +34,7 @@ import limpiezaImg from "../assets/limpieza.png";
                 >
             </section>
             <section class="image__cover">
-                <Image src={fondoImg} alt="" />
-
+                <Image src={fondoImg} alt="" class="cover_img"/>
             </section>
         </div>
     </div>
@@ -92,8 +91,8 @@ import limpiezaImg from "../assets/limpieza.png";
             </div>
 
             <div class="image__about">
-                    <Image src={fondo1Img} alt="" width={385}/>
-                    <Image src={fondo2Img} alt="" width={400}/>
+                <Image src={fondo1Img} alt="" width={385} class="img1" />
+                <Image src={fondo2Img} alt="" width={400} class="img2" />
             </div>
         </div>
     </div>
@@ -112,7 +111,7 @@ import limpiezaImg from "../assets/limpieza.png";
 
             <div class="container__card-service container__box-cardPrimary">
                 <div class="card__service box__card-primary">
-                    <Image src={reikiImg} alt="" width={60}/>
+                    <Image src={reikiImg} alt="" width={60} />
                     <h2>Reiki</h2>
                     <p>
                         El reiki es una terapia de sanación y autosanación que
@@ -125,7 +124,7 @@ import limpiezaImg from "../assets/limpieza.png";
                     </a>
                 </div>
                 <div class="card__service box__card-primary">
-                    <Image src={contelacionesImg} alt="" width={60}/>
+                    <Image src={contelacionesImg} alt="" width={60} />
                     <h2>Constelaciones familiares</h2>
                     <p>
                         Una constelación familiar es un proceso fenomenológico y
@@ -138,7 +137,7 @@ import limpiezaImg from "../assets/limpieza.png";
                     </a>
                 </div>
                 <div class="card__service box__card-primary">
-                    <Image src={registrosImg} alt="" width={60}/>
+                    <Image src={registrosImg} alt="" width={60} />
                     <h2>Registros akashicos</h2>
                     <p>
                         La tradición hinduista sostiene que los registros
@@ -150,7 +149,7 @@ import limpiezaImg from "../assets/limpieza.png";
                     </a>
                 </div>
                 <div class="card__service box__card-primary">
-                    <Image src={tameanaImg} alt="" width={60}/>
+                    <Image src={tameanaImg} alt="" width={60} />
                     <h2>Tameana</h2>
                     <p>
                         Tameana es una terapia vibracional canalizada, que nos
@@ -161,7 +160,7 @@ import limpiezaImg from "../assets/limpieza.png";
                     </a>
                 </div>
                 <div class="card__service box__card-primary">
-                    <Image src={mediumImg} alt="" width={60}/>
+                    <Image src={mediumImg} alt="" width={60} />
                     <h2>Mediumnidad</h2>
                     <p>
                         Mediumnidad es la facultad que nos capacita para entrar
@@ -172,7 +171,7 @@ import limpiezaImg from "../assets/limpieza.png";
                     </a>
                 </div>
                 <div class="card__service box__card-primary">
-                    <Image src={limpiezaImg} alt="" width={60}/>
+                    <Image src={limpiezaImg} alt="" width={60} />
                     <h2>Limpieza energética</h2>
                     <p>
                         Una limpieza energética es un proceso que se utiliza
@@ -267,13 +266,8 @@ import limpiezaImg from "../assets/limpieza.png";
         color: var(--color_text-primary);
     }
 
-    .image__cover {
-        width: 100%;
-    }
-
-    .image__cover img {
-        margin-top: -10%;
-        width: 450px;
+    .cover_img{
+        height: 300px;
     }
 
     /*Estilos generales CARDS*/
@@ -358,7 +352,12 @@ import limpiezaImg from "../assets/limpieza.png";
         align-items: center;
         justify-content: center;
     }
-
+    .img1 {
+        border-radius: 36px 0 0 36px;
+    }
+    .img2 {
+        border-radius: 0 36px 36px 0;
+    }
     .text__about {
         width: 100%;
         padding-right: 40px;
@@ -420,6 +419,12 @@ import limpiezaImg from "../assets/limpieza.png";
         .about {
             flex-direction: column-reverse;
             text-align: center;
+        }
+        .img1 {
+            height: 200px;
+        }
+        .img2 {
+            height: 200px;
         }
 
         .text__about {

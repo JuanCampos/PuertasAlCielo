@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import reikiImg from "../assets/reiki.png";
 import fondoImg from "../assets/fondo.png";
+
 ---
 
 <!-- Arriba -->
@@ -157,4 +158,48 @@ import fondoImg from "../assets/fondo.png";
         height: 5px;
         border-radius: 0.5rem;
     }
+    @media (max-width: 768px) {
+    .homecont {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .homegroup {
+        padding-top: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .hometitle {
+        font-size: 30px;
+    }
+
+    .homedes {
+        font-size: 15px;
+    }
+
+    .text__cover {
+        padding-right: 0;
+    }
+
+    .homegroup img {
+        width: 200px !important;
+        height: auto !important;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 400px) {
+    .hometitle {
+        font-size: 24px;
+    }
+
+    .homedes {
+        font-size: 14px;
+    }
+
+    .homegroup img {
+        width: 150px !important;
+    }
+}
+
 </style>

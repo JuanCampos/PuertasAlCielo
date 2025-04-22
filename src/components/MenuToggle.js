@@ -6,19 +6,22 @@ export default function MenuToggle() {
 
             if (toggle && menu) {
                 toggle.addEventListener("click", () => {
+                    const isOpen = toggle.classList.toggle("open");
+                    toggle.textContent = isOpen ? '✖' : '☰';
                     menu.classList.toggle("active");
                 });
 
-                // Opcional: cerrar menú al hacer clic en un enlace
+                // Cierra el menú al hacer clic en un enlace
                 menu.querySelectorAll("a").forEach((link) => {
                     link.addEventListener("click", () => {
                         menu.classList.remove("active");
+                        toggle.classList.remove("open");
+                        toggle.textContent = '☰';
                     });
                 });
             }
         };
 
-        // Esperar a que cargue el DOM si es necesario
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", init);
         } else {
@@ -26,5 +29,5 @@ export default function MenuToggle() {
         }
     }
 
-    return null; // Astro espera que un componente JS retorne algo
+    return null;
 }
