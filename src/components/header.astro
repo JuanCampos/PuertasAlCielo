@@ -7,9 +7,7 @@ import manosImg from "./src/assets/manos.png"
 <header>
     <div class="container__header">
         <div class="logo">
-            <a href="#">
-                <Image src={manosImg} alt="" width={60} height={60}/>
-            </a>
+            <a href="#">Puertas al cielo</a>
         </div>
 
         <button id="menu-toggle" class="menu-toggle-btn"> ☰ </button>
@@ -81,8 +79,11 @@ import manosImg from "./src/assets/manos.png"
         z-index: 1;
     }
 
-    .logo img {
-        border-radius: 50px;
+    .logo a {
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
     }
 
     .menu {
