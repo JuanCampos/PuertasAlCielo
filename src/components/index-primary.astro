@@ -91,8 +91,8 @@ import limpiezaImg from "../assets/limpieza.png";
             </div>
 
             <div class="image__about">
-                <Image src={fondo1Img} alt="" width={385} class="img1" />
-                <Image src={fondo2Img} alt="" width={400} class="img2" />
+                <Image src={fondo1Img} alt="" width={385} class="img1" class="img1" />
+                <Image src={fondo2Img} alt="" width={400} class="img2" class="img2" />
             </div>
         </div>
     </div>
@@ -343,6 +343,12 @@ import limpiezaImg from "../assets/limpieza.png";
         background: var(--main_color-tercery);
         margin-top: 100px;
     }
+    .img1{
+        border-radius: 36px 0 0 36px;
+    }
+    .img2{
+        border-radius: 0 36px 36px 0;
+    }
 
     .about {
         max-width: 1200px;
@@ -431,6 +437,13 @@ import limpiezaImg from "../assets/limpieza.png";
             padding-right: 0;
             margin-top: 40px;
         }
+        .img1 {
+            height: 200px;
+        }
+        .img2 {
+            height: 200px;
+        }
+
 
         .image__about {
             justify-content: center;
