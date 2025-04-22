@@ -1,12 +1,14 @@
 ---
+import { Image } from "astro:assets";
 import MenuToggle from "../components/MenuToggle.js";
+import manosImg from "./src/assets/manos.png"
 ---
 
 <header>
     <div class="container__header">
         <div class="logo">
             <a href="#">
-                <img src="./src/assets/manos.png" alt="" />
+                <Image src={manosImg} alt="" width={60} height={60}/>
             </a>
         </div>
 
@@ -15,8 +17,8 @@ import MenuToggle from "../components/MenuToggle.js";
         <div class="menu" id="menu">
             <nav >
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre mi</a></li>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="#sobre">Sobre mi</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                 </ul>
             </nav>
@@ -43,7 +45,7 @@ import MenuToggle from "../components/MenuToggle.js";
         --color_text-secundary: #101e2c;
         --color_text-tertiary: #485663;
         --main_color-primary: #9a00bf;
-        --main_color-secundary: #f4d4fb;
+        --main_color-secundary: #e68eff;
         --background-color: #fafbfe;
         --lowText_font_size: 16px;
         --text_size_title: 40px;
@@ -80,8 +82,7 @@ import MenuToggle from "../components/MenuToggle.js";
     }
 
     .logo img {
-        width: 70px;
-        border-radius: 20px;
+        border-radius: 50px;
     }
 
     .menu {

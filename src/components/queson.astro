@@ -1,0 +1,160 @@
+---
+import { Image } from "astro:assets";
+import reikiImg from "../assets/reiki.png";
+import fondoImg from "../assets/fondo.png";
+---
+
+<!-- Arriba -->
+<section class="home-container">
+    <div class="swiper home-swiper">
+        <div class="swiper-wrapper">
+            <section>
+                <div class="homecont grid">
+                    <div class="homedata">
+                        <h1 class="hometitle">
+                            ¿Qué son las terapias holísticas?
+                        </h1>
+                        <p class="homedes">
+                            Las terapias holísticas son un enfoque de
+                            tratamiento que considera a la persona en su
+                            totalidad: cuerpo, mente y espíritu, buscando
+                            equilibrar y armonizar estos aspectos para lograr
+                            una salud y bienestar óptimos. Se diferencian de la
+                            medicina convencional al no enfocarse únicamente en
+                            síntomas o enfermedades físicas, sino en la persona
+                            como un todo interconectado.
+                        </p>
+                    </div>
+
+                    <div class="homegroup">
+                        <Image src={reikiImg} alt="" width={280} height={280} />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="swiper home-swiper">
+        <div class="swiper-wrapper">
+            <section>
+                <div class="homecont grid">
+                    <div class="homegroup">
+                        <Image src={fondoImg} alt="" width={280} height={280} />
+                    </div>
+                    <div class="homedata">
+                        <h1 class="hometitle">
+                            ¿Qué hace un terapeuta holístico?
+                        </h1>
+                        <p class="homedes">
+                            Un terapeuta holístico trabaja para promover la
+                            salud integral y el bienestar, considerando a la
+                            persona como un todo (cuerpo, mente, espíritu) y no
+                            solo como una suma de partes. Su objetivo es ayudar
+                            a las personas a encontrar un equilibrio armonioso y
+                            un bienestar óptimo en todos los aspectos de su
+                            vida, utilizando diversas técnicas y enfoques.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+    }
+    :root {
+        --color_text-primary: #ab29ca;
+        --color_text-secundary: #101e2c;
+        --color_text-tertiary: #485663;
+        --main_color-primary: #9a00bf;
+        --main_color-secundary: #e68eff;
+        --main_color-tercery: #f0baff;
+        --background-color: #fafbfe;
+        --lowText_font_size: 16px;
+        --text_size_title: 40px;
+        --text_title_card: 24px;
+        --text_title_cardv2: 20px;
+        --text_paragraph: 16px;
+        --box_shadow-primary: 0px 6px 50px -20px rgba(0, 0, 0, 0.2);
+    }
+
+    .text__cover {
+        width: 100%;
+        padding-right: 150px;
+    }
+
+    .text__cover h1 {
+    }
+
+    .text__cover p {
+        font-size: var(--text_paragraph);
+        margin-top: 40px;
+        color: var(--color_text-tertiary);
+    }
+    /*HOME*/
+    .home-container {
+        background: var(--main_color-tercery);
+    }
+    .homecont {
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    .homegroup {
+        display: grid;
+        position: relative;
+        padding-top: 2rem;
+    }
+
+    .hometitle {
+        margin-bottom: 1rem;
+        font-size: 50px;
+        color: var(--color_text-secundary);
+    }
+
+    .homedes {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    .homebut {
+        display: flex;
+    }
+
+    .homebut a {
+        margin-left: 10px;
+    }
+
+    .swiper-pagination {
+        position: initial;
+        margin-top: 1rem;
+    }
+
+    .swiper-pagination-bullet {
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        opacity: 1;
+    }
+
+    .swiper-pagination-horizontal.swiper-pagination-bullets
+        .swiper-pagination-bullet {
+        margin: 0 0.5rem;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 1.5rem;
+        height: 5px;
+        border-radius: 0.5rem;
+    }
+</style>
